@@ -302,7 +302,7 @@ type xlsxMergeCell struct {
 }
 
 type xlsxMergeCells struct {
-	XMLName xml.Name //`xml:"mergeCells,omitempty"`
+	XMLName xml.Name        //`xml:"mergeCells,omitempty"`
 	Count   int             `xml:"count,attr,omitempty"`
 	Cells   []xlsxMergeCell `xml:"mergeCell,omitempty"`
 }
@@ -404,7 +404,7 @@ func newXlsxWorksheet() (worksheet *xlsxWorksheet) {
 	worksheet.PageSetUp.FitToWidth = 1
 	worksheet.PageSetUp.FitToHeight = 1
 	worksheet.PageSetUp.PageOrder = "downThenOver"
-	worksheet.PageSetUp.Orientation = "portrait"
+	worksheet.PageSetUp.Orientation = "landscape"
 	worksheet.PageSetUp.UsePrinterDefaults = false
 	worksheet.PageSetUp.BlackAndWhite = false
 	worksheet.PageSetUp.Draft = false
